@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Math Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="bg-music" loop preload="auto">
+        <source src="superhero-theme.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="game-container">
+        <h1>Super Math Heroes: Solve & Save the City!</h1>
+        <p class="instructions">Help the superhero defeat the villain by solving math problems!</p>
+
+        <div id="hero-villain-container">
+            <img id="hero-img" src="hero.png" class="hidden" alt="Superhero">
+            <img id="villain-img" src="villain.png" class="hidden" alt="Villain">
+        </div>
+
+        <div id="game-area">
+            <p id="question"></p>
+            <input type="number" id="answer" placeholder="Enter your answer">
+            <button onclick="checkAnswer()">Submit</button>
+            <p id="feedback"></p>
+        </div>
+
+        <div class="progress">
+            <p>Power Level:</p>
+            <progress id="progress-bar" value="0" max="10"></progress>
+        </div>
+
+        <p id="final-message" class="hidden">You defeated the villain! 🎉</p>
+        <button id="restart-button" class="hidden" onclick="restartGame()">Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
