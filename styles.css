@@ -93,4 +93,26 @@ progress {
     height: 30px;
     border: 3px solid black;
     background: white;
+    transition: width 0.5s ease-in-out;
 }
+
+/* Victory Message */
+#final-message {
+    font-size: 28px;
+    font-weight: bold;
+    color: yellow;
+    text-shadow: 3px 3px 0px black;
+    background: red;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: none;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+/* Cool bouncing effect for celebration */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
